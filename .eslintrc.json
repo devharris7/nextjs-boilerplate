@@ -1,3 +1,22 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "plugin:storybook/recommended", "google", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    // do not require JSDoc for your functions
+    "require-jsdoc": "off",
+    // suppress errors for missing 'import React' in files
+    "react/react-in-jsx-scope": "off"
+  }
 }
