@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders homepage 1`] = `
+<div>
+  <div>
+    <main>
+      <h1
+        class="text-3xl font-bold underline"
+      >
+        Hello world!
+      </h1>
+      <button
+        class="btn"
+      >
+        Try me!
+      </button>
+    </main>
+    <footer>
+      this is footer
+    </footer>
+  </div>
+</div>
+`;
