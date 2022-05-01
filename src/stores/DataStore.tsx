@@ -1,0 +1,27 @@
+import { observable } from "mobx";
+import { useStaticRendering } from "mobx-react";
+
+const isServer = typeof window === "undefined";
+useStaticRendering(isServer);
+
+type SerializedStore = {
+  title: string;
+  content: string;
+};
+
+export class DataStore {
+  @observable title: string | undefined;
+
+  hydrate(serializedStore: SerializedStore) {
+    this.title = serializedStore.title != null ? serializedStore.title : "";
+  }
+
+  changeTitle(newTitle: string) {
+    this.title = newTitle;
+  }
+}
+
+export async function fetchInitialStoreState() {
+  // You can do anything to fetch initial store state
+  return {};
+}
